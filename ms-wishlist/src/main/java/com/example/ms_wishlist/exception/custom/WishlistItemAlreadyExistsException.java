@@ -1,0 +1,7 @@
+package com.example.ms_wishlist.exception.custom;
+
+public class WishlistItemAlreadyExistsException extends RuntimeException {
+    public WishlistItemAlreadyExistsException(String message) {
+        super(message);
+    }
+}
