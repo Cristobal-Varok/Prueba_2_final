@@ -41,7 +41,7 @@ public class CatalogoClient {
 
             // Construir la petición
             WebClient.RequestHeadersSpec<?> request = webClient.get()
-                    .uri("/api/productos/exists/{id}", productId);
+                    .uri("/api/v1/productos/exists/{id}", productId);
 
             // Agregar el token si existe
             if (token != null && !token.isBlank()) {

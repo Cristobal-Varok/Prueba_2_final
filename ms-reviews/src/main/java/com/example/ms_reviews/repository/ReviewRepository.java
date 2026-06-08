@@ -9,4 +9,5 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
     List<Review> findByUsername(String username);
     List<Review> findByProductIdAndProductType(String productId, String productType);
     boolean existsByProductIdAndUsername(String productId, String username);
+    //obtener review por id falla
 }

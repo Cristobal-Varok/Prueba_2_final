@@ -1,4 +1,4 @@
-package com.example.ms_subscriptions.openApiConfigs;
+package com.example.ms_reviews.openApiConfigs;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -18,9 +18,9 @@ public class OpenApiConfig {
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("API Suscripciones")
+                        .title("API Reseñas")
                         .version("1.0")
-                        .description("Microservicio de Suscripciones")
+                        .description("Microservicio de Reseñas")
                         .contact(new Contact()
                                 .name("Cristobal")
                                 .email("cris.zunigac@duocuc.cl")))
