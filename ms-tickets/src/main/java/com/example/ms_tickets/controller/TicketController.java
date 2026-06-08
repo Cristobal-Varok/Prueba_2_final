@@ -3,6 +3,11 @@ package com.example.ms_tickets.controller;
 import com.example.ms_tickets.dto.TicketDTO;
 import com.example.ms_tickets.model.Ticket;
 import com.example.ms_tickets.service.TicketService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -16,106 +21,102 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
 @RestController
 @RequestMapping("/api/v1/tickets")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearerAuth")
+@Tag(name = "Tickets (Usuario)", description = "Endpoints para usuarios gestionar sus tickets")
 public class TicketController {
 
     private static final Logger log = LoggerFactory.getLogger(TicketController.class);
-
     private final TicketService ticketService;
 
-    // ========== ENDPOINTS PARA USUARIOS ==========
-
-    // Crear ticket
+    @Operation(summary = "Crear ticket", description = "Crea un nuevo ticket de soporte")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Ticket creado exitosamente"),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos"),
+            @ApiResponse(responseCode = "401", description = "No autenticado")
+    })
     @PostMapping
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<?> createTicket(Authentication authentication, @Valid @RequestBody TicketDTO ticketDTO) {
         if (authentication == null || authentication.getName() == null) {
-            log.warn("Intento de crear ticket - Usuario no autenticado");
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(Map.of("error", "No autenticado"));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "No autenticado"));
         }
 
         String username = authentication.getName();
-        log.info("Creando ticket - Usuario: {}, Asunto: {}", username, ticketDTO.getSubject());
+        log.info("Creando ticket - Usuario: {}", username);
 
         Ticket ticket = ticketService.createTicket(username, ticketDTO);
 
-        log.info("Ticket creado exitosamente - ID: {}, Usuario: {}", ticket.getId(), username);
+        ticket.add(linkTo(methodOn(TicketController.class).getMyTickets(authentication)).withRel("myTickets"));
+        ticket.add(linkTo(methodOn(TicketController.class).getTicketById(authentication, ticket.getId())).withSelfRel());
+        ticket.add(linkTo(methodOn(TicketController.class).deleteMyTicket(authentication, ticket.getId())).withRel("delete"));
 
         return ResponseEntity.status(HttpStatus.CREATED).body(Map.of(
                 "message", "Ticket creado correctamente",
-                "ticket", Map.of(
-                        "id", ticket.getId(),
-                        "subject", ticket.getSubject(),
-                        "description", ticket.getDescription(),
-                        "status", ticket.getStatus(),
-                        "createdAt", ticket.getCreatedAt()
-                )
+                "ticket", ticket
         ));
     }
 
-    // Obtener mis tickets
+    @Operation(summary = "Obtener mis tickets", description = "Devuelve todos los tickets del usuario autenticado")
     @GetMapping("/my-tickets")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<?> getMyTickets(Authentication authentication) {
         if (authentication == null || authentication.getName() == null) {
-            log.warn("Intento de obtener mis tickets - Usuario no autenticado");
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(Map.of("error", "No autenticado"));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "No autenticado"));
         }
 
         String username = authentication.getName();
-        log.debug("Obteniendo tickets del usuario: {}", username);
-
         List<Ticket> tickets = ticketService.getMyTickets(username);
 
-        log.debug("Tickets encontrados para usuario {}: {}", username, tickets.size());
+        tickets.forEach(ticket -> {
+            ticket.add(linkTo(methodOn(TicketController.class).getTicketById(authentication, ticket.getId())).withSelfRel());
+            ticket.add(linkTo(methodOn(TicketController.class).deleteMyTicket(authentication, ticket.getId())).withRel("delete"));
+        });
 
         return ResponseEntity.ok(Map.of(
                 "tickets", tickets,
-                "total", tickets.size()
+                "total", tickets.size(),
+                "_links", Map.of("self", linkTo(methodOn(TicketController.class).getMyTickets(authentication)).withSelfRel())
         ));
     }
 
-    // Obtener un ticket específico (solo si es mío)
+    @Operation(summary = "Obtener ticket por ID", description = "Devuelve un ticket específico")
     @GetMapping("/{ticketId}")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<?> getTicketById(Authentication authentication, @PathVariable Long ticketId) {
         if (authentication == null || authentication.getName() == null) {
-            log.warn("Intento de obtener ticket - Usuario no autenticado");
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(Map.of("error", "No autenticado"));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "No autenticado"));
         }
 
         String username = authentication.getName();
-        log.debug("Obteniendo ticket ID: {} para usuario: {}", ticketId, username);
-
         Ticket ticket = ticketService.getMyTicketById(ticketId, username);
 
-        log.debug("Ticket encontrado - ID: {}, Usuario: {}", ticketId, username);
+        ticket.add(linkTo(methodOn(TicketController.class).getTicketById(authentication, ticketId)).withSelfRel());
+        ticket.add(linkTo(methodOn(TicketController.class).getMyTickets(authentication)).withRel("myTickets"));
+        ticket.add(linkTo(methodOn(TicketController.class).deleteMyTicket(authentication, ticketId)).withRel("delete"));
 
         return ResponseEntity.ok(Map.of("ticket", ticket));
     }
 
-    // Eliminar mi ticket
+    @Operation(summary = "Eliminar mi ticket", description = "Elimina un ticket del usuario autenticado")
     @DeleteMapping("/{ticketId}")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<?> deleteMyTicket(Authentication authentication, @PathVariable Long ticketId) {
         if (authentication == null || authentication.getName() == null) {
-            log.warn("Intento de eliminar ticket - Usuario no autenticado");
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(Map.of("error", "No autenticado"));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "No autenticado"));
         }
 
         String username = authentication.getName();
-        log.warn("Eliminando ticket - ID: {}, Usuario: {}", ticketId, username);
-
         ticketService.deleteMyTicket(ticketId, username);
 
-        log.info("Ticket eliminado exitosamente - ID: {}, Usuario: {}", ticketId, username);
-
-        return ResponseEntity.ok(Map.of("message", "Ticket eliminado correctamente"));
+        return ResponseEntity.ok(Map.of(
+                "message", "Ticket eliminado correctamente",
+                "_links", Map.of("myTickets", linkTo(methodOn(TicketController.class).getMyTickets(authentication)).withRel("myTickets"))
+        ));
     }
 }
