@@ -1,9 +1,13 @@
 package com.example.ms_wishlist.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.time.LocalDateTime;
+
+import static io.swagger.v3.oas.annotations.media.Schema.AccessMode.READ_ONLY;
 
 @Entity
 @Data
@@ -13,30 +17,39 @@ import java.time.LocalDateTime;
 @Table(name = "wishlist", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"username", "productId"})
 })
-public class WishlistItem {
+@Schema(description = "Entidad que representa un producto en la lista de deseos de un usuario")
+public class WishlistItem extends RepresentationModel<WishlistItem> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "ID único del item en wishlist", example = "1", accessMode = READ_ONLY)
     private Long id;
 
     @Column(nullable = false)
-    private String username;  // Usuario que agrega a wishlist (del token)
+    @Schema(description = "Nombre del usuario que agregó el producto", example = "javier")
+    private String username;
 
     @Column(nullable = false)
-    private String productId;  // ID del producto (videojuego o comic)
+    @Schema(description = "ID del producto (videojuego o comic)", example = "prod-123")
+    private String productId;
 
     @Column(nullable = false)
-    private String productName;  // Nombre del producto (para mostrar rápido)
+    @Schema(description = "Nombre del producto", example = "The Legend of Zelda")
+    private String productName;
 
     @Column(nullable = false)
-    private String productType;  // "GAME" o "COMIC"
+    @Schema(description = "Tipo de producto", example = "GAME", allowableValues = {"GAME", "COMIC"})
+    private String productType;
 
     @Column(nullable = false)
-    private Double productPrice;  // Precio del producto
+    @Schema(description = "Precio del producto", example = "59.99")
+    private Double productPrice;
 
     @Column(nullable = false)
-    private String imageUrl;  // Imagen del producto
+    @Schema(description = "URL de la imagen del producto", example = "https://example.com/image.jpg")
+    private String imageUrl;
 
     @Column(nullable = false)
-    private LocalDateTime addedAt;  // Fecha en que se agregó
+    @Schema(description = "Fecha en que se agregó a la wishlist", example = "2026-06-08T10:30:00", accessMode = READ_ONLY)
+    private LocalDateTime addedAt;
 }

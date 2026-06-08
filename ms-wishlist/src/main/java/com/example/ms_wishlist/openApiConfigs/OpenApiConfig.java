@@ -1,4 +1,4 @@
-package com.example.ms_users.openApiConfigs;
+package com.example.ms_wishlist.openApiConfigs;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -18,12 +18,12 @@ public class OpenApiConfig {
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("API Login de Usuarios")
+                        .title("API Wishlist")
                         .version("1.0")
-                        .description("Microservicio de Login")
+                        .description("Microservicio de Wishlist")
                         .contact(new Contact()
-                                .name("Fernando")
-                                .email("correo@ejemplo.cl")))
+                                .name("Cristobal")
+                                .email("cris.zunigac@duocuc.cl")))
                 .addSecurityItem(
                         new SecurityRequirement()
                                 .addList(securitySchemeName))
@@ -36,4 +36,3 @@ public class OpenApiConfig {
                                 .bearerFormat("JWT"));
     }
 }
-
