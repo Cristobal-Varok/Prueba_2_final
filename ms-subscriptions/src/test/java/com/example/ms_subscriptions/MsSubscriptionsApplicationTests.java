@@ -9,5 +9,4 @@ class MsSubscriptionsApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
