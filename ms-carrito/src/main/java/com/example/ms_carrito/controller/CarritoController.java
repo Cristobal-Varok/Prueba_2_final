@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import java.util.stream.Collectors;
 
@@ -31,8 +32,17 @@ public class CarritoController {
     public ResponseEntity<CarritoResponseDTO> getMyCart(Authentication authentication) {
         String username = authentication.getName();
         log.info("Obteniendo carrito del usuario: {}", username);
+
         Carrito carrito = carritoService.getUserCart(username);
-        return ResponseEntity.ok(mapToResponseDTO(carrito));
+        CarritoResponseDTO dto = mapToResponseDTO(carrito);
+
+        dto.add(linkTo(methodOn(CarritoController.class).getMyCart(authentication)).withSelfRel());
+        dto.add(linkTo(methodOn(CarritoController.class).addItem(authentication, null)).withRel("agregar-item"));
+        dto.add(linkTo(methodOn(CarritoController.class).removeItem(authentication, null)).withRel("eliminar-item"));
+        dto.add(linkTo(methodOn(CarritoController.class).clearCart(authentication)).withRel("vaciar-carrito"));
+        dto.add(linkTo(methodOn(CarritoController.class).updateQuantity(authentication, null, null)).withRel("actualizar-cantidad"));
+
+        return ResponseEntity.ok(dto);
     }
 
     // Agregar item al carrito
@@ -43,7 +53,12 @@ public class CarritoController {
         String username = authentication.getName();
         log.info("Agregando item al carrito del usuario: {}, producto: {}", username, request.getProductId());
         Carrito updatedCarrito = carritoService.addItem(username, request);
-        return ResponseEntity.status(HttpStatus.CREATED).body(mapToResponseDTO(updatedCarrito));
+        CarritoResponseDTO dto = mapToResponseDTO(updatedCarrito);
+        dto.add(linkTo(methodOn(CarritoController.class).getMyCart(authentication)).withRel("mi-carrito"));
+        dto.add(linkTo(methodOn(CarritoController.class).addItem(authentication, null)).withSelfRel());
+        dto.add(linkTo(methodOn(CarritoController.class).removeItem(authentication, request.getProductId())).withRel("eliminar-item"));
+        return ResponseEntity.status(HttpStatus.CREATED).body(dto);
+
     }
 
     // Eliminar item del carrito
@@ -54,7 +69,11 @@ public class CarritoController {
         String username = authentication.getName();
         log.info("Eliminando producto {} del carrito de {}", productId, username);
         Carrito updatedCarrito = carritoService.removeItem(username, productId);
-        return ResponseEntity.ok(mapToResponseDTO(updatedCarrito));
+        CarritoResponseDTO dto = mapToResponseDTO(updatedCarrito);
+        dto.add(linkTo(methodOn(CarritoController.class).getMyCart(authentication)).withRel("mi-carrito"));
+        dto.add(linkTo(methodOn(CarritoController.class).addItem(authentication, null)).withRel("agregar-item"));
+        dto.add(linkTo(methodOn(CarritoController.class).removeItem(authentication, productId)).withSelfRel());
+        return ResponseEntity.ok(dto);
     }
 
     // Limpiar carrito
@@ -76,7 +95,11 @@ public class CarritoController {
         String username = authentication.getName();
         log.info("Actualizando cantidad del producto {} a {} para usuario {}", productId, quantity, username);
         Carrito updatedCarrito = carritoService.updateItemQuantity(username, productId, quantity);
-        return ResponseEntity.ok(mapToResponseDTO(updatedCarrito));
+        CarritoResponseDTO dto = mapToResponseDTO(updatedCarrito);
+        dto.add(linkTo(methodOn(CarritoController.class).getMyCart(authentication)).withRel("mi-carrito"));
+        dto.add(linkTo(methodOn(CarritoController.class).updateQuantity(authentication, productId, quantity)).withSelfRel());
+        dto.add(linkTo(methodOn(CarritoController.class).removeItem(authentication, productId)).withRel("eliminar-item"));
+        return ResponseEntity.ok(dto);
     }
 
     private CarritoResponseDTO mapToResponseDTO(Carrito carrito) {
