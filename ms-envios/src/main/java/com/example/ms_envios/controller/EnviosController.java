@@ -1,6 +1,6 @@
 package com.example.ms_envios.controller;
 
-import com.example.ms_envios.dto.request.CreateEnvioRequest;
+import com.example.ms_envios.dto.CreateEnvioRequest;
 import com.example.ms_envios.dto.response.EnvioResponseDTO;
 import com.example.ms_envios.service.EnviosService;
 import jakarta.validation.Valid;

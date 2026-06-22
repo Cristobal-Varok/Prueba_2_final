@@ -26,6 +26,9 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
+                        // PERMITIR SWAGGER
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+                        // PERMITIR ENDPOINTS PÚBLICOS
                         .requestMatchers("/api/v1/orders/exists/**").permitAll()
                         .requestMatchers("/api/v1/orders/*/payment-status").permitAll()
                         .anyRequest().authenticated()

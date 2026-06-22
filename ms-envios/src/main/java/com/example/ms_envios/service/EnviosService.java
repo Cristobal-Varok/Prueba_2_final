@@ -3,7 +3,7 @@ package com.example.ms_envios.service;
 import com.example.ms_envios.client.OrderClient;
 import com.example.ms_envios.client.UserClient;
 import com.example.ms_envios.dto.OrderDTO;
-import com.example.ms_envios.dto.request.CreateEnvioRequest;
+import com.example.ms_envios.dto.CreateEnvioRequest;
 import com.example.ms_envios.dto.response.EnvioResponseDTO;
 import com.example.ms_envios.exception.custom.*;
 import com.example.ms_envios.model.Envios;
