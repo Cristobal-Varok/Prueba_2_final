@@ -6,6 +6,10 @@ import com.example.ms_carrito.dto.response.CarritoResponseDTO;
 import com.example.ms_carrito.model.Carrito;
 import com.example.ms_carrito.model.CarritoItem;
 import com.example.ms_carrito.service.CarritoService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,11 +26,17 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/v1/carrito")
 @RequiredArgsConstructor
+@Tag(name = "Carrito", description = "Operaciones del carrito de compras")
 public class CarritoController {
 
     private final CarritoService carritoService;
 
-    // Obtener mi carrito
+    @Operation(summary = "Obtener mi carrito", description = "Retorna el carrito del usuario autenticado")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Carrito obtenido correctamente"),
+            @ApiResponse(responseCode = "403", description = "No autorizado"),
+            @ApiResponse(responseCode = "404", description = "Carrito no encontrado")
+    })
     @GetMapping
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<CarritoResponseDTO> getMyCart(Authentication authentication) {
@@ -45,7 +55,12 @@ public class CarritoController {
         return ResponseEntity.ok(dto);
     }
 
-    // Agregar item al carrito
+    @Operation(summary = "Agregar item al carrito", description = "Agrega un producto al carrito del usuario")
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Item agregado correctamente"),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos"),
+            @ApiResponse(responseCode = "404", description = "Producto no encontrado")
+    })
     @PostMapping("/items")
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<CarritoResponseDTO> addItem(Authentication authentication,
@@ -58,10 +73,13 @@ public class CarritoController {
         dto.add(linkTo(methodOn(CarritoController.class).addItem(authentication, null)).withSelfRel());
         dto.add(linkTo(methodOn(CarritoController.class).removeItem(authentication, request.getProductId())).withRel("eliminar-item"));
         return ResponseEntity.status(HttpStatus.CREATED).body(dto);
-
     }
 
-    // Eliminar item del carrito
+    @Operation(summary = "Eliminar item del carrito", description = "Elimina un producto del carrito por su ID")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Item eliminado correctamente"),
+            @ApiResponse(responseCode = "404", description = "Producto no encontrado en el carrito")
+    })
     @DeleteMapping("/items/{productId}")
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<CarritoResponseDTO> removeItem(Authentication authentication,
@@ -76,7 +94,11 @@ public class CarritoController {
         return ResponseEntity.ok(dto);
     }
 
-    // Limpiar carrito
+    @Operation(summary = "Vaciar carrito", description = "Elimina todos los items del carrito")
+    @ApiResponses({
+            @ApiResponse(responseCode = "204", description = "Carrito vaciado correctamente"),
+            @ApiResponse(responseCode = "404", description = "Carrito no encontrado")
+    })
     @DeleteMapping
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<Void> clearCart(Authentication authentication) {
@@ -86,7 +108,12 @@ public class CarritoController {
         return ResponseEntity.noContent().build();
     }
 
-    // Actualizar cantidad de un item
+    @Operation(summary = "Actualizar cantidad de item", description = "Actualiza la cantidad de un producto en el carrito")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Cantidad actualizada correctamente"),
+            @ApiResponse(responseCode = "400", description = "Cantidad inválida"),
+            @ApiResponse(responseCode = "404", description = "Producto no encontrado en el carrito")
+    })
     @PutMapping("/items/{productId}")
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<CarritoResponseDTO> updateQuantity(Authentication authentication,

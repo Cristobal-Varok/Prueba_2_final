@@ -97,7 +97,6 @@ public class PagosService {
         String errorMessage = null;
 
         try {
-            // Simulación de procesamiento de pago (siempre exitoso por ahora)
             status = PagosStatus.COMPLETED;
             log.debug("Pago simulado exitoso, transactionId: {}", transactionId);
         } catch (Exception e) {
@@ -110,7 +109,7 @@ public class PagosService {
         // 6. Guardar el pago
         Pagos pagos = Pagos.builder()
                 .orderId(request.getOrderId())
-                .userId(order.getClientId())
+                .userId(order.getUserId()) // ← corregido
                 .amount(request.getAmount())
                 .method(request.getMethod())
                 .status(status)
@@ -129,15 +128,13 @@ public class PagosService {
                 log.info("Estado de orden actualizado a PAID para orden: {}", request.getOrderId());
             } catch (Exception e) {
                 log.error("Error al actualizar estado de la orden: {}", e.getMessage());
-                // No lanzamos excepción porque el pago ya fue procesado
             }
 
             try {
-                cartClient.clearCart(order.getClientId());
+                cartClient.clearCart(order.getUserId()); // ← corregido
                 log.info("Carrito limpiado para usuario: {}", username);
             } catch (Exception e) {
                 log.error("Error al limpiar el carrito: {}", e.getMessage());
-                // No lanzamos excepción porque el pago ya fue procesado
             }
         }
 

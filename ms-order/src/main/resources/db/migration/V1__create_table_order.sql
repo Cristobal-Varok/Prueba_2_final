@@ -6,7 +6,7 @@ CREATE TABLE orders (
     payment_status VARCHAR(20) DEFAULT 'PENDING',
     total_amount DOUBLE NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT NULL
+    updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
 CREATE TABLE order_items (
@@ -17,4 +17,3 @@ CREATE TABLE order_items (
     price DOUBLE NOT NULL,
     FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
 );
-
