@@ -5,59 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6600aed4-2a7f-4199-9a1a-d715466e470f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ms-reviews/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-reviews/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-subscriptions/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-subscriptions/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-tickets/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/resources/application-docker.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-wishlist/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-wishlist/src/main/resources/application-docker.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/controller/CarritoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/controller/CarritoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/dto/CreateOrderFromCartDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/dto/CreateOrderFromCartDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/dto/OrderItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/dto/OrderItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/dto/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/dto/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-envios/logs/ms-shipping.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-envios/logs/ms-shipping.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-envios/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-envios/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-carrito/logs/ms_cart.log" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/logs/ms_cart.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-carrito/logs/ms_cart.log.2026-06-11.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-carrito/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-descuentos/logs/ms_discount.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-descuentos/logs/ms_discount.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-descuentos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-descuentos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-envios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-envios/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-envios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-envios/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/logs/ms-orders.2026-06-08.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-order/logs/ms-orders.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/logs/ms-orders.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/src/main/java/com/example/ms_order/config/OpenApiConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/src/main/java/com/example/ms_order/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/java/com/example/ms_order/security/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-order/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/resources/application-docker.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/src/main/resources/db/migration/V1__create_table_order.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/resources/db/migration/V1__create_table_order.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/src/main/resources/db/migration/V2__insert_datos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/resources/db/migration/V2__insert_datos.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-pagos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/controller/PagosAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/controller/PagosAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/controller/PagosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/controller/PagosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/CartDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/CartDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/CartItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/CartItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/OrderItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/OrderItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/request/PagosRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/request/PagosRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/response/PagosResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/dto/response/PagosResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/service/PagosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/service/PagosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-reviews/logs/ms-reviews.2026-05-28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-productos/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-reviews/logs/ms-reviews.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-reviews/logs/ms-reviews.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-reviews/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-reviews/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-subscriptions/logs/ms-subscriptions.2026-06-08.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-reviews/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-reviews/src/main/resources/application-docker.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-subscriptions/logs/ms-subscriptions.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-subscriptions/logs/ms-subscriptions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-subscriptions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-subscriptions/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-subscriptions/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-subscriptions/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-subscriptions/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-tickets/logs/ms-tickets.2026-06-08.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-tickets/logs/ms-tickets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/logs/ms-tickets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-tickets/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-tickets/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-tickets/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-users/logs/ms-users.2026-05-16.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-users/logs/ms-users.2026-05-17.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-users/logs/ms-users.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/logs/ms-users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-users/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-wishlist/logs/ms-wishlist.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-wishlist/logs/ms-wishlist.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-wishlist/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-wishlist/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-wishlist/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-wishlist/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-wishlist/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-wishlist/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
