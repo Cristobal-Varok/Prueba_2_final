@@ -27,25 +27,59 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    // ========== REGISTRO ==========
+    // ========== REGISTRO CON VALIDACIONES ==========
 
     public User register(String username, String password, String role, String mail, String address) {
         log.debug("Registrando usuario - Username: {}, Email: {}, Rol: {}", username, mail, role);
 
+        // 1. Validar campos obligatorios
+        if (username == null || username.isBlank()) {
+            log.warn("Registro fallido - Username vacío o nulo");
+            throw new IllegalArgumentException("Username es requerido");
+        }
+        if (password == null || password.isBlank()) {
+            log.warn("Registro fallido - Password vacío o nulo para usuario: {}", username);
+            throw new IllegalArgumentException("Password es requerido");
+        }
+        if (mail == null || mail.isBlank()) {
+            log.warn("Registro fallido - Email vacío o nulo para usuario: {}", username);
+            throw new IllegalArgumentException("Mail es requerido");
+        }
+
+        // 2. Validar rol (asignar USER por defecto si no viene)
+        String finalRole = (role == null || role.isBlank()) ? "USER" : role;
+        if (!finalRole.equals("USER") && !finalRole.equals("ADMIN")) {
+            log.warn("Registro fallido - Rol inválido: {} para usuario: {}", finalRole, username);
+            throw new InvalidRoleException("Rol inválido. Use: USER o ADMIN");
+        }
+
+        // 3. Verificar unicidad de username
+        if (userRepository.findByUsername(username).isPresent()) {
+            log.warn("Registro fallido - Username ya existe: {}", username);
+            throw new UsernameAlreadyExistsException("El username '" + username + "' ya está en uso");
+        }
+
+        // 4. Verificar unicidad de email
+        if (userRepository.findByMail(mail).isPresent()) {
+            log.warn("Registro fallido - Email ya existe: {}", mail);
+            throw new EmailAlreadyExistsException("El email '" + mail + "' ya está registrado");
+        }
+
+        // 5. Construir y guardar usuario
         User user = User.builder()
                 .username(username)
                 .password(passwordEncoder.encode(password))
                 .mail(mail)
-                .role(role != null ? role : "USER")
+                .role(finalRole)
                 .address(address)
                 .build();
 
         User savedUser = userRepository.save(user);
         log.info("Usuario registrado exitosamente - ID: {}, Username: {}", savedUser.getId(), username);
-
         return savedUser;
     }
 
+    // Sobrecarga para registro con rol por defecto USER y address null
     public User register(String username, String password, String mail) {
         return register(username, password, "USER", mail, null);
     }

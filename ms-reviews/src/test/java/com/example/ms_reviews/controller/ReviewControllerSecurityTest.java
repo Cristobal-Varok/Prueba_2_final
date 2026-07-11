@@ -3,6 +3,7 @@ package com.example.ms_reviews.controller;
 import com.example.ms_reviews.dto.ReviewDTO;
 import com.example.ms_reviews.security.filter.JwtAuthFilter;
 import com.example.ms_reviews.security.jwt.JwtService;
+import com.example.ms_reviews.service.CustomUserDetailsService;
 import com.example.ms_reviews.service.ReviewService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(ReviewController.class)
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(addFilters = false)
 class ReviewControllerSecurityTest {
 
     @Autowired
@@ -34,6 +35,9 @@ class ReviewControllerSecurityTest {
 
     @MockitoBean
     private JwtAuthFilter jwtAuthFilter;
+
+    @MockitoBean
+    private CustomUserDetailsService customUserDetailsService;
 
     @Test
     void createReview_ShouldReturn401_WhenNoToken() throws Exception {

@@ -4,40 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6600aed4-2a7f-4199-9a1a-d715466e470f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/logs/ms_cart.log" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/logs/ms_cart.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/logs/ms_cart.log.2026-06-11.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-descuentos/logs/ms_discount.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-descuentos/logs/ms_discount.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-descuentos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-descuentos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-envios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-envios/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-envios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-envios/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/logs/ms-orders.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/logs/ms-orders.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-productos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-reviews/logs/ms-reviews.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-reviews/logs/ms-reviews.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-reviews/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-reviews/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-reviews/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-reviews/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-subscriptions/logs/ms-subscriptions.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-subscriptions/logs/ms-subscriptions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-subscriptions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-subscriptions/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-subscriptions/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-subscriptions/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-tickets/logs/ms-tickets.2026-06-08.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-tickets/logs/ms-tickets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/logs/ms-tickets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-tickets/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-tickets/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-users/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-users/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-wishlist/logs/ms-wishlist.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-wishlist/logs/ms-wishlist.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-wishlist/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-wishlist/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-wishlist/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-wishlist/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/server/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6600aed4-2a7f-4199-9a1a-d715466e470f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

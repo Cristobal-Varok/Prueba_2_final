@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Slf4j
 @Service
@@ -22,6 +23,44 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final ProductClient productClient;
+
+    // ========== REGLAS DE TRANSICIONES DE ESTADO ==========
+    private boolean isValidTransition(OrderStatus current, OrderStatus next) {
+        if (current == next) return true; // mismo estado, sin cambios
+
+        switch (current) {
+            case PENDING:
+                return next == OrderStatus.PAID ||
+                        next == OrderStatus.PAYMENT_FAILED ||
+                        next == OrderStatus.CANCELLED;
+            case PAYMENT_FAILED:
+                return next == OrderStatus.PAID ||   // reintentar pago
+                        next == OrderStatus.CANCELLED;
+            case PAID:
+                return next == OrderStatus.PROCESSING;
+            case PROCESSING:
+                return next == OrderStatus.SHIPPED;
+            case SHIPPED:
+                return next == OrderStatus.DELIVERED;
+            case DELIVERED:
+            case CANCELLED:
+                return false; // estados terminales
+            default:
+                return false;
+        }
+    }
+
+    private void validateStateTransition(OrderStatus current, OrderStatus next) {
+        if (!isValidTransition(current, next)) {
+            log.warn("Transición de estado inválida: {} -> {}", current, next);
+            throw new IllegalStateException(
+                    String.format("No se puede cambiar el estado de '%s' a '%s'. Transición no permitida.",
+                            current, next)
+            );
+        }
+    }
+
+    // ========== MÉTODOS EXISTENTES (con validación añadida) ==========
 
     @Transactional
     public Order createOrder(Order order) {
@@ -96,7 +135,6 @@ public class OrderService {
     public Order updateOrder(Long id, Order orderData) {
         log.info("Actualizando orden con id: {}", id);
         Order existingOrder = getOrderById(id);
-        //existingOrder.setShippingAddress(orderData.getShippingAddress());
         existingOrder.setPaymentId(orderData.getPaymentId());
         existingOrder.setUpdatedAt(LocalDateTime.now());
         Order updated = orderRepository.save(existingOrder);
@@ -108,6 +146,10 @@ public class OrderService {
     public Order changeOrderStatus(Long id, OrderStatus newStatus) {
         log.info("Cambiando estado de orden id: {} a {}", id, newStatus);
         Order order = getOrderById(id);
+
+        // VALIDACIÓN DE TRANSICIÓN
+        validateStateTransition(order.getStatus(), newStatus);
+
         order.setStatus(newStatus);
         order.setUpdatedAt(LocalDateTime.now());
         return orderRepository.save(order);
@@ -117,17 +159,29 @@ public class OrderService {
     public Order updatePaymentStatus(Long id, String paymentStatus) {
         log.info("Actualizando estado de pago de orden id: {} a {}", id, paymentStatus);
         Order order = getOrderById(id);
+
+        OrderStatus newStatus;
+        if ("PAID".equals(paymentStatus)) {
+            newStatus = OrderStatus.PAID;
+        } else if ("PAYMENT_FAILED".equals(paymentStatus)) {
+            newStatus = OrderStatus.PAYMENT_FAILED;
+        } else {
+            throw new IllegalArgumentException("Estado de pago inválido: " + paymentStatus);
+        }
+
+        // VALIDACIÓN DE TRANSICIÓN (usando el estado de la orden actual)
+        validateStateTransition(order.getStatus(), newStatus);
+
         order.setPaymentStatus(paymentStatus);
+        order.setStatus(newStatus);
+        order.setUpdatedAt(LocalDateTime.now());
 
         if ("PAID".equals(paymentStatus)) {
-            order.setStatus(OrderStatus.PAID);
             log.info("Orden {} marcada como PAID", id);
         } else if ("PAYMENT_FAILED".equals(paymentStatus)) {
-            order.setStatus(OrderStatus.PAYMENT_FAILED);
             log.warn("Orden {} marcada como PAYMENT_FAILED", id);
         }
 
-        order.setUpdatedAt(LocalDateTime.now());
         return orderRepository.save(order);
     }
 

@@ -45,6 +45,17 @@ public class GlobalExceptionHandler {
                 .body(new ErrorResponse(400, "Solicitud inválida", ex.getMessage()));
     }
 
+    /**
+     * Manejo de conflictos de estado (transiciones inválidas)
+     * Retorna HTTP 409 Conflict
+     */
+    @ExceptionHandler(IllegalStateException.class)
+    public ResponseEntity<ErrorResponse> handleIllegalState(IllegalStateException ex) {
+        log.warn("Conflicto de estado: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(new ErrorResponse(409, "Conflicto de estado", ex.getMessage()));
+    }
+
     @ExceptionHandler(FeignException.NotFound.class)
     public ResponseEntity<ErrorResponse> handleFeignNotFound(FeignException.NotFound ex) {
         log.warn("Producto no encontrado: {}", ex.getMessage());

@@ -30,7 +30,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/orders")
+@RequestMapping("/api/v1/order")
 @RequiredArgsConstructor
 @Tag(name = "Órdenes", description = "API para la gestión de órdenes de compra")
 @SecurityRequirement(name = "bearerAuth")

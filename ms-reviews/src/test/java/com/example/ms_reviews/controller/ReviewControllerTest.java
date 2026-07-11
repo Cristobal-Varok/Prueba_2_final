@@ -2,7 +2,9 @@ package com.example.ms_reviews.controller;
 
 import com.example.ms_reviews.dto.ReviewDTO;
 import com.example.ms_reviews.model.Review;
+import com.example.ms_reviews.security.filter.JwtAuthFilter;
 import com.example.ms_reviews.security.jwt.JwtService;
+import com.example.ms_reviews.service.CustomUserDetailsService;
 import com.example.ms_reviews.service.ReviewService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,8 +12,15 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.http.MediaType;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -27,6 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(ReviewController.class)
 @AutoConfigureMockMvc(addFilters = false)
+@Import(ReviewControllerTest.TestSecurityConfig.class)
 class ReviewControllerTest {
 
     @Autowired
@@ -40,6 +50,23 @@ class ReviewControllerTest {
 
     @MockitoBean
     private JwtService jwtService;
+
+    @MockitoBean
+    private JwtAuthFilter jwtAuthFilter;
+
+    @MockitoBean
+    private CustomUserDetailsService customUserDetailsService;
+
+    @TestConfiguration
+    static class TestSecurityConfig {
+        @Bean
+        public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+            http
+                    .csrf(AbstractHttpConfigurer::disable)
+                    .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
+            return http.build();
+        }
+    }
 
     private Review review;
     private ReviewDTO reviewDTO;
@@ -64,6 +91,7 @@ class ReviewControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "javier", roles = {"USER"})
     void createReview_ShouldReturn201_WhenValid() throws Exception {
         when(reviewService.createReview(any(String.class), any(ReviewDTO.class))).thenReturn(review);
 
@@ -140,6 +168,7 @@ class ReviewControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "javier", roles = {"USER"})
     void getMyReviews_ShouldReturn200_WhenAuthenticated() throws Exception {
         when(reviewService.getReviewsByUser("javier")).thenReturn(List.of(review));
 
@@ -159,6 +188,7 @@ class ReviewControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "javier", roles = {"USER"})
     void updateReview_ShouldReturn200_WhenValid() throws Exception {
         ReviewDTO updateDTO = new ReviewDTO();
         updateDTO.setProductId("PROD-001");
@@ -195,6 +225,7 @@ class ReviewControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "javier", roles = {"USER"})
     void deleteMyReview_ShouldReturn200_WhenSuccess() throws Exception {
         doNothing().when(reviewService).deleteReview(1L, "javier");
 
@@ -207,6 +238,7 @@ class ReviewControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "admin", roles = {"ADMIN"})
     void deleteAnyReview_ShouldReturn200_WhenAdmin() throws Exception {
         doNothing().when(reviewService).deleteAnyReview(1L);
 

@@ -49,7 +49,7 @@ services:
     build: ./ms-envios
     container_name: ms-envios
     ports:
-      - "9099:9098"
+      - "9099:9099" 
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
@@ -79,7 +79,7 @@ services:
     build: ./ms-subscriptions
     container_name: ms-subscriptions
     ports:
-      - "9100:9094"
+      - "9089:9089"
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
@@ -89,7 +89,7 @@ services:
     build: ./ms-tickets
     container_name: ms-tickets
     ports:
-      - "9096:9092"
+      - "9096:9096"
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
