@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6600aed4-2a7f-4199-9a1a-d715466e470f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gateway/src/test/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-carrito/src/test/java/com/example/ms_carrito/client/ProductServiceClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-carrito/src/test/java/com/example/ms_carrito/client/UserClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Prueba_2_final.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="6600aed4-2a7f-4199-9a1a-d715466e470f" name="Changes" comment="ultimas versiones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/com/example/gateway/GatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/com/example/gateway/GatewayApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/logs/ms_carrito.log" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/logs/ms_carrito.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/service/CarritoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-carrito/src/main/java/com/example/ms_carrito/service/CarritoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-descuentos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-descuentos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-pagos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-productos/logs/ms-productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/ms-productos/logs/ms-productos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-users/src/main/java/com/example/ms_users/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/ms_users/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-order/src/main/java/com/example/ms_order/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/java/com/example/ms_order/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-order/src/main/java/com/example/ms_order/model/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-order/src/main/java/com/example/ms_order/model/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/client/CartClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/client/CartClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/client/OrderClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/service/PagosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-pagos/src/main/java/com/example/ms_pagos/service/PagosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-tickets/src/main/java/com/example/ms_tickets/client/CatalogoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-tickets/src/main/java/com/example/ms_tickets/client/CatalogoClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +152,20 @@
       <option name="presentableId" value="Default" />
       <updated>1781997145111</updated>
     </task>
+    <task id="LOCAL-00001" summary="ultimas versiones">
+      <option name="closed" value="true" />
+      <created>1783916642195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783916642195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ultimas versiones" />
+    <option name="LAST_COMMIT_MESSAGE" value="ultimas versiones" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

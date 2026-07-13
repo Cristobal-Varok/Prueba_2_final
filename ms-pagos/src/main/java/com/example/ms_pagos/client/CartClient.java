@@ -16,7 +16,7 @@ public class CartClient {
     @Autowired
     public CartClient(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder
-                .baseUrl("http://MS-CART")
+                .baseUrl("http://ms-carrito")
                 .build();
     }
 
@@ -39,7 +39,7 @@ public class CartClient {
         }
     }
 
-    public void clearCart(Long userId) {
+    public void clearCart() {
         log.info("Limpiando carrito del usuario: {}", userId);
         try {
             webClient.delete()

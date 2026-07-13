@@ -131,7 +131,7 @@ public class PagosService {
             }
 
             try {
-                cartClient.clearCart(order.getUserId()); // ← corregido
+                cartClient.clearCart(); // ← corregido
                 log.info("Carrito limpiado para usuario: {}", username);
             } catch (Exception e) {
                 log.error("Error al limpiar el carrito: {}", e.getMessage());

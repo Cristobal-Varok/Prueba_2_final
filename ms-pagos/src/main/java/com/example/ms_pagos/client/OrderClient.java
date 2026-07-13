@@ -16,7 +16,7 @@ public class OrderClient {
     @Autowired
     public OrderClient(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder
-                .baseUrl("http://MS-ORDERS")
+                .baseUrl("http://ms-order")
                 .build();
     }
 
@@ -24,7 +24,7 @@ public class OrderClient {
         log.info("Consultando orden con id: {} en ms-orders", orderId);
         try {
             OrderDTO order = webClient.get()
-                    .uri("/api/v1/orders/exists/{id}", orderId)
+                    .uri("/api/v1/order/exists/{id}", orderId)
                     .retrieve()
                     .onStatus(status -> status.is4xxClientError(),
                             response -> Mono.error(new RuntimeException("Orden no encontrada")))
@@ -43,7 +43,7 @@ public class OrderClient {
         log.info("Actualizando estado de pago de la orden {} a {}", orderId, paymentStatus);
         try {
             webClient.patch()
-                    .uri("/api/v1/orders/{id}/payment-status?status={status}", orderId, paymentStatus)
+                    .uri("/api/v1/order/{id}/payment-status?status={status}", orderId, paymentStatus)
                     .retrieve()
                     .toBodilessEntity()
                     .block();

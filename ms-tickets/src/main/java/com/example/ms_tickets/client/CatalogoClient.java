@@ -14,21 +14,21 @@ public class CatalogoClient {
     @Autowired
     public CatalogoClient(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder
-                .baseUrl("http://Catalago")  // Nombre del servicio en Eureka
+                .baseUrl("http://ms-productos")  // Nombre del servicio en Eureka
                 .build();
     }
 
     public boolean productExists(String productId) {
         try {
             Map response = webClient.get()
-                    .uri("/api/productos/exists/{id}", productId)
+                    .uri("/api/v1/productos/exists/{id}", productId)
                     .retrieve()
                     .bodyToMono(Map.class)
                     .block();
 
             return response != null && (Boolean) response.getOrDefault("exists", false);
         } catch (Exception e) {
-            System.out.println("❌ Error validando producto: " + e.getMessage());
+            System.out.println("Error validando producto: " + e.getMessage());
             return false;
         }
     }
