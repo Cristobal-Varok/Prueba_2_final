@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="server" />
+        <module name="gateway" />
+      </profile>
+      <profile name="Annotation profile for ms_shipping" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="ms_carrito" />
+        <module name="ms-envios (2)" />
+        <module name="ms-envios (1)" />
+      </profile>
+      <profile name="Annotation profile for ms-wishlist" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="ms-subscriptions" />
+        <module name="ms-productos" />
+        <module name="ms-users" />
+        <module name="ms-tickets" />
+        <module name="ms-wishlist" />
+        <module name="order" />
+      </profile>
+      <profile name="Annotation profile for ms_payment" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="ms-pagos" />
+        <module name="ms_descuentos" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Prueba_2_final" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gateway" options="-parameters" />
+      <module name="ms-envios (1)" options="-parameters" />
+      <module name="ms-envios (2)" options="-parameters" />
+      <module name="ms-pagos" options="-parameters" />
+      <module name="ms-productos" options="-parameters" />
+      <module name="ms-subscriptions" options="-parameters" />
+      <module name="ms-tickets" options="-parameters" />
+      <module name="ms-users" options="-parameters" />
+      <module name="ms-wishlist" options="-parameters" />
+      <module name="ms_carrito" options="-parameters" />
+      <module name="ms_descuentos" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="server" options="-parameters" />
+    </option>
+  </component>
+</project>
