@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-@Schema(description = "DTO de respuesta con datos del envío")
+@Schema(description = "DTO de respuesta con datos del envío, incluye enlaces HATEOAS")
 public class EnvioResponseDTO extends RepresentationModel<EnvioResponseDTO> {
 
     @Schema(description = "ID único del envío", example = "1", accessMode = AccessMode.READ_ONLY)
