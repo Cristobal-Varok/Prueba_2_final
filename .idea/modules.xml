@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Prueba_2_final.iml" filepath="$PROJECT_DIR$/.idea/Prueba_2_final.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prueba_2_final/ms-envios/ms-envios.iml" filepath="$PROJECT_DIR$/Prueba_2_final/ms-envios/ms-envios.iml" />
     </modules>
   </component>
 </project>

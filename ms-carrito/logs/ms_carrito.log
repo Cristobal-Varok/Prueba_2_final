@@ -1727,3 +1727,551 @@ java.lang.Exception: Error genérico
 2026-07-12T20:13:41.847-04:00  INFO 16320 --- [ms-carrito] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-07-12T20:13:41.847-04:00  INFO 16320 --- [ms-carrito] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-07-12T20:13:41.855-04:00  INFO 16320 --- [ms-carrito] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-12T23:48:43.493-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : Starting CarritoAdminControllerTest using Java 21.0.8 with PID 3244 (started by Usuario in C:\Users\Usuario\Desktop\Prueba_2_final\ms-carrito)
+2026-07-12T23:48:43.495-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : Running with Spring Boot v3.4.4, Spring v6.2.5
+2026-07-12T23:48:43.496-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-07-12T23:48:45.639-04:00  WARN 3244 --- [ms-carrito] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.example.ms_carrito.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-07-12T23:48:46.754-04:00  WARN 3244 --- [ms-carrito] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 03092e77-40c8-40df-aa2f-1d473e8d1797
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-12T23:48:46.844-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Filter 'jwtAuthFilter' configured for use
+2026-07-12T23:48:46.854-04:00  INFO 3244 --- [ms-carrito] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-07-12T23:48:46.854-04:00  INFO 3244 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-07-12T23:48:46.856-04:00  INFO 3244 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-07-12T23:48:47.054-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : Started CarritoAdminControllerTest in 5.467 seconds (process running for 12.037)
+2026-07-12T23:48:47.172-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:47.303-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Acceso denegado - Permisos insuficientes
+2026-07-12T23:48:47.426-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:47.428-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoAdminController  : ADMIN - Verificando existencia de carrito para usuario: 10
+2026-07-12T23:48:47.520-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:47.521-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoAdminController  : ADMIN - Obteniendo carrito del usuario 10
+2026-07-12T23:48:47.582-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:47.586-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoAdminController  : ADMIN - Limpiando carrito del usuario 10
+2026-07-12T23:48:47.619-04:00  INFO 3244 --- [ms-carrito] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ms_carrito.controller.CarritoControllerTest]: CarritoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-12T23:48:47.650-04:00  INFO 3244 --- [ms-carrito] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ms_carrito.MsCarritoApplication for test class com.example.ms_carrito.controller.CarritoControllerTest
+2026-07-12T23:48:48.727-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : Starting CarritoControllerTest using Java 21.0.8 with PID 3244 (started by Usuario in C:\Users\Usuario\Desktop\Prueba_2_final\ms-carrito)
+2026-07-12T23:48:48.728-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : Running with Spring Boot v3.4.4, Spring v6.2.5
+2026-07-12T23:48:48.728-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-07-12T23:48:49.095-04:00  WARN 3244 --- [ms-carrito] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.example.ms_carrito.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-07-12T23:48:49.134-04:00  WARN 3244 --- [ms-carrito] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cbd6cd42-3e0f-4304-a60b-f35b79335e2c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-12T23:48:49.140-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Filter 'jwtAuthFilter' configured for use
+2026-07-12T23:48:49.140-04:00  INFO 3244 --- [ms-carrito] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-07-12T23:48:49.140-04:00  INFO 3244 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-07-12T23:48:49.141-04:00  INFO 3244 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-07-12T23:48:49.152-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : Started CarritoControllerTest in 1.489 seconds (process running for 14.133)
+2026-07-12T23:48:49.172-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:49.351-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Agregando item al carrito del usuario: testuser, producto: 1
+2026-07-12T23:48:49.530-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:49.531-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Eliminando producto 1 del carrito de testuser
+2026-07-12T23:48:49.547-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:49.550-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Actualizando cantidad del producto 1 a 3 para usuario testuser
+2026-07-12T23:48:49.569-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:49.570-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Limpiando carrito del usuario: testuser
+2026-07-12T23:48:49.584-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:49.585-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Obteniendo carrito del usuario: testuser
+2026-07-12T23:48:49.614-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Carrito no encontrado: Carrito 1 no existe
+2026-07-12T23:48:49.626-04:00 ERROR 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Error en tiempo de ejecución: Error inesperado
+
+java.lang.RuntimeException: Error inesperado
+	at com.example.ms_carrito.exception.GlobalExceptionHandlerTest.deberiaManejarRuntimeException(GlobalExceptionHandlerTest.java:64) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+
+2026-07-12T23:48:49.640-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Usuario no encontrado: Usuario no existe
+2026-07-12T23:48:49.642-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Stock insuficiente: Sin stock
+2026-07-12T23:48:49.645-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Acceso denegado - Permisos insuficientes
+2026-07-12T23:48:49.669-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Argumento inválido: Argumento inválido
+2026-07-12T23:48:49.673-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Item no encontrado: Item no existe
+2026-07-12T23:48:49.675-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Producto no encontrado: Producto no existe
+2026-07-12T23:48:49.844-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Error de validación - Campos inválidos: []
+2026-07-12T23:48:49.846-04:00 ERROR 3244 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Error inesperado: Error genérico
+
+java.lang.Exception: Error genérico
+	at com.example.ms_carrito.exception.GlobalExceptionHandlerTest.deberiaManejarGenericException(GlobalExceptionHandlerTest.java:70) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+
+2026-07-12T23:48:49.862-04:00  INFO 3244 --- [ms-carrito] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ms_carrito.MsCarritoApplicationTests]: MsCarritoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-12T23:48:49.901-04:00  INFO 3244 --- [ms-carrito] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ms_carrito.MsCarritoApplication for test class com.example.ms_carrito.MsCarritoApplicationTests
+2026-07-12T23:48:50.977-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : Starting MsCarritoApplicationTests using Java 21.0.8 with PID 3244 (started by Usuario in C:\Users\Usuario\Desktop\Prueba_2_final\ms-carrito)
+2026-07-12T23:48:50.977-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : Running with Spring Boot v3.4.4, Spring v6.2.5
+2026-07-12T23:48:50.978-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : The following 1 profile is active: "test"
+2026-07-12T23:48:51.697-04:00  INFO 3244 --- [ms-carrito] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-12T23:48:51.788-04:00  INFO 3244 --- [ms-carrito] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2026-07-12T23:48:52.034-04:00  INFO 3244 --- [ms-carrito] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=204ac420-8a9c-3231-8191-ed3a6efb4a20
+2026-07-12T23:48:52.376-04:00  INFO 3244 --- [ms-carrito] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-12T23:48:52.514-04:00  INFO 3244 --- [ms-carrito] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2026-07-12T23:48:52.599-04:00  INFO 3244 --- [ms-carrito] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-12T23:48:52.842-04:00  INFO 3244 --- [ms-carrito] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-12T23:48:52.894-04:00  INFO 3244 --- [ms-carrito] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-12T23:48:53.341-04:00  INFO 3244 --- [ms-carrito] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-12T23:48:53.346-04:00  INFO 3244 --- [ms-carrito] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-12T23:48:53.481-04:00  INFO 3244 --- [ms-carrito] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-12T23:48:55.005-04:00  INFO 3244 --- [ms-carrito] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-12T23:48:55.097-04:00  INFO 3244 --- [ms-carrito] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-12T23:48:55.917-04:00  WARN 3244 --- [ms-carrito] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-12T23:48:56.014-04:00  INFO 3244 --- [ms-carrito] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-07-12T23:48:57.545-04:00  INFO 3244 --- [ms-carrito] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-12T23:48:57.554-04:00  INFO 3244 --- [ms-carrito] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-07-12T23:48:57.604-04:00  WARN 3244 --- [ms-carrito] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-07-12T23:48:57.633-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : Started MsCarritoApplicationTests in 7.719 seconds (process running for 22.615)
+2026-07-12T23:48:57.781-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:57.792-04:00 ERROR 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Error procesando token JWT: Error de parseo
+2026-07-12T23:48:57.796-04:00  WARN 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Token inválido o expirado
+2026-07-12T23:48:57.800-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:48:57.813-04:00  INFO 3244 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Usuario autenticado: testuser con rol USER
+2026-07-12T23:48:57.964-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Error al extraer username: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2026-07-12T23:48:58.005-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Token inválido: JWT expired 601004 milliseconds ago at 2026-07-13T03:38:57.000Z. Current time: 2026-07-13T03:48:58.004Z. Allowed clock skew: 0 milliseconds.
+2026-07-12T23:48:58.006-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Error al extraer role: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2026-07-12T23:48:58.018-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Token inválido: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2026-07-12T23:48:58.249-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Agregando item al carrito del usuario: testuser, producto: 1
+2026-07-12T23:48:58.249-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Stock insuficiente para producto Producto A: stock=1, solicitado=5
+2026-07-12T23:48:58.264-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Eliminando producto 99 del carrito del usuario: testuser
+2026-07-12T23:48:58.264-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:48:58.265-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Producto 99 no encontrado en el carrito del usuario testuser
+2026-07-12T23:48:58.269-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Agregando item al carrito del usuario: noexiste, producto: 1
+2026-07-12T23:48:58.270-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Usuario no existe: noexiste
+2026-07-12T23:48:58.273-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Limpiando carrito del usuario: testuser
+2026-07-12T23:48:58.274-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:48:58.274-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Carrito limpiado para usuario: testuser
+2026-07-12T23:48:58.281-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Eliminando producto 1 del carrito del usuario: testuser
+2026-07-12T23:48:58.281-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:48:58.282-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Producto eliminado del carrito
+2026-07-12T23:48:58.287-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Actualizando cantidad para producto 1 del usuario testuser a 5
+2026-07-12T23:48:58.287-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:48:58.289-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Cantidad actualizada a 5
+2026-07-12T23:48:58.295-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Obteniendo carrito del usuario: testuser
+2026-07-12T23:48:58.296-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:48:58.301-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Agregando item al carrito del usuario: testuser, producto: 1
+2026-07-12T23:48:58.303-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Nuevo item agregado: Producto A x 2
+2026-07-12T23:48:58.304-04:00  INFO 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Carrito actualizado para usuario: testuser
+2026-07-12T23:48:58.308-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Obteniendo carrito del usuario: testuser
+2026-07-12T23:48:58.308-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:48:58.309-04:00  WARN 3244 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Carrito no encontrado para usuario ID: 1
+2026-07-12T23:48:58.314-04:00 DEBUG 3244 --- [ms-carrito] [main] c.e.m.service.CustomUserDetailsService   : Cargando UserDetails para usuario: testuser
+2026-07-12T23:48:58.789-04:00  INFO 3244 --- [ms-carrito] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-12T23:48:58.794-04:00  INFO 3244 --- [ms-carrito] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-12T23:48:58.797-04:00  INFO 3244 --- [ms-carrito] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-12T23:51:40.334-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : Starting CarritoAdminControllerTest using Java 21.0.8 with PID 532 (started by Usuario in C:\Users\Usuario\Desktop\Prueba_2_final\ms-carrito)
+2026-07-12T23:51:40.336-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : Running with Spring Boot v3.4.4, Spring v6.2.5
+2026-07-12T23:51:40.337-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-07-12T23:51:42.437-04:00  WARN 532 --- [ms-carrito] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.example.ms_carrito.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-07-12T23:51:43.535-04:00  WARN 532 --- [ms-carrito] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cb45725a-34eb-4e53-9392-cebbae4f8eac
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-12T23:51:43.615-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Filter 'jwtAuthFilter' configured for use
+2026-07-12T23:51:43.624-04:00  INFO 532 --- [ms-carrito] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-07-12T23:51:43.625-04:00  INFO 532 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-07-12T23:51:43.628-04:00  INFO 532 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-07-12T23:51:43.820-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.c.CarritoAdminControllerTest       : Started CarritoAdminControllerTest in 5.374 seconds (process running for 11.517)
+2026-07-12T23:51:43.921-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:44.057-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Acceso denegado - Permisos insuficientes
+2026-07-12T23:51:44.181-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:44.184-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.controller.CarritoAdminController  : ADMIN - Verificando existencia de carrito para usuario: 10
+2026-07-12T23:51:44.271-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:44.273-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoAdminController  : ADMIN - Obteniendo carrito del usuario 10
+2026-07-12T23:51:44.332-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:44.334-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoAdminController  : ADMIN - Limpiando carrito del usuario 10
+2026-07-12T23:51:44.360-04:00  INFO 532 --- [ms-carrito] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ms_carrito.controller.CarritoControllerTest]: CarritoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-12T23:51:44.382-04:00  INFO 532 --- [ms-carrito] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ms_carrito.MsCarritoApplication for test class com.example.ms_carrito.controller.CarritoControllerTest
+2026-07-12T23:51:45.461-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : Starting CarritoControllerTest using Java 21.0.8 with PID 532 (started by Usuario in C:\Users\Usuario\Desktop\Prueba_2_final\ms-carrito)
+2026-07-12T23:51:45.461-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : Running with Spring Boot v3.4.4, Spring v6.2.5
+2026-07-12T23:51:45.463-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-07-12T23:51:45.816-04:00  WARN 532 --- [ms-carrito] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.example.ms_carrito.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-07-12T23:51:45.854-04:00  WARN 532 --- [ms-carrito] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2d5e0206-99b3-4624-96b7-c7a1cf175646
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-12T23:51:45.860-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Filter 'jwtAuthFilter' configured for use
+2026-07-12T23:51:45.860-04:00  INFO 532 --- [ms-carrito] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-07-12T23:51:45.861-04:00  INFO 532 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-07-12T23:51:45.862-04:00  INFO 532 --- [ms-carrito] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-07-12T23:51:45.868-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoControllerTest   : Started CarritoControllerTest in 1.48 seconds (process running for 13.564)
+2026-07-12T23:51:45.884-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:46.033-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Agregando item al carrito del usuario: testuser, producto: 1
+2026-07-12T23:51:46.194-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:46.195-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Eliminando producto 1 del carrito de testuser
+2026-07-12T23:51:46.207-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:46.210-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Actualizando cantidad del producto 1 a 3 para usuario testuser
+2026-07-12T23:51:46.224-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:46.225-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Limpiando carrito del usuario: testuser
+2026-07-12T23:51:46.236-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:46.236-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.controller.CarritoController       : Obteniendo carrito del usuario: testuser
+2026-07-12T23:51:46.275-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Carrito no encontrado: Carrito 1 no existe
+2026-07-12T23:51:46.277-04:00 ERROR 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Error en tiempo de ejecución: Error inesperado
+
+java.lang.RuntimeException: Error inesperado
+	at com.example.ms_carrito.exception.GlobalExceptionHandlerTest.deberiaManejarRuntimeException(GlobalExceptionHandlerTest.java:64) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+
+2026-07-12T23:51:46.284-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Usuario no encontrado: Usuario no existe
+2026-07-12T23:51:46.286-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Stock insuficiente: Sin stock
+2026-07-12T23:51:46.288-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Acceso denegado - Permisos insuficientes
+2026-07-12T23:51:46.291-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Argumento inválido: Argumento inválido
+2026-07-12T23:51:46.294-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Item no encontrado: Item no existe
+2026-07-12T23:51:46.298-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Producto no encontrado: Producto no existe
+2026-07-12T23:51:46.476-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Error de validación - Campos inválidos: []
+2026-07-12T23:51:46.477-04:00 ERROR 532 --- [ms-carrito] [main] c.e.m.exception.GlobalExceptionHandler   : Error inesperado: Error genérico
+
+java.lang.Exception: Error genérico
+	at com.example.ms_carrito.exception.GlobalExceptionHandlerTest.deberiaManejarGenericException(GlobalExceptionHandlerTest.java:70) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767) ~[junit-platform-commons-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+
+2026-07-12T23:51:46.485-04:00  INFO 532 --- [ms-carrito] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ms_carrito.MsCarritoApplicationTests]: MsCarritoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-12T23:51:46.520-04:00  INFO 532 --- [ms-carrito] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ms_carrito.MsCarritoApplication for test class com.example.ms_carrito.MsCarritoApplicationTests
+2026-07-12T23:51:47.592-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : Starting MsCarritoApplicationTests using Java 21.0.8 with PID 532 (started by Usuario in C:\Users\Usuario\Desktop\Prueba_2_final\ms-carrito)
+2026-07-12T23:51:47.592-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : Running with Spring Boot v3.4.4, Spring v6.2.5
+2026-07-12T23:51:47.593-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : The following 1 profile is active: "test"
+2026-07-12T23:51:48.252-04:00  INFO 532 --- [ms-carrito] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-12T23:51:48.352-04:00  INFO 532 --- [ms-carrito] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interface.
+2026-07-12T23:51:48.619-04:00  INFO 532 --- [ms-carrito] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=204ac420-8a9c-3231-8191-ed3a6efb4a20
+2026-07-12T23:51:48.930-04:00  INFO 532 --- [ms-carrito] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-12T23:51:49.037-04:00  INFO 532 --- [ms-carrito] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2026-07-12T23:51:49.103-04:00  INFO 532 --- [ms-carrito] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-12T23:51:49.333-04:00  INFO 532 --- [ms-carrito] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-12T23:51:49.386-04:00  INFO 532 --- [ms-carrito] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-12T23:51:49.773-04:00  INFO 532 --- [ms-carrito] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-12T23:51:49.777-04:00  INFO 532 --- [ms-carrito] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-12T23:51:49.895-04:00  INFO 532 --- [ms-carrito] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-12T23:51:51.334-04:00  INFO 532 --- [ms-carrito] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-12T23:51:51.424-04:00  INFO 532 --- [ms-carrito] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-12T23:51:52.227-04:00  WARN 532 --- [ms-carrito] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-12T23:51:52.319-04:00  INFO 532 --- [ms-carrito] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-07-12T23:51:53.873-04:00  INFO 532 --- [ms-carrito] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-12T23:51:53.881-04:00  INFO 532 --- [ms-carrito] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-07-12T23:51:53.931-04:00  WARN 532 --- [ms-carrito] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-07-12T23:51:53.951-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.MsCarritoApplicationTests          : Started MsCarritoApplicationTests in 7.422 seconds (process running for 21.647)
+2026-07-12T23:51:54.093-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:54.100-04:00 ERROR 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Error procesando token JWT: Error de parseo
+2026-07-12T23:51:54.103-04:00  WARN 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Token inválido o expirado
+2026-07-12T23:51:54.106-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : No se encontró token Bearer
+2026-07-12T23:51:54.114-04:00  INFO 532 --- [ms-carrito] [main] c.e.m.security.filter.JwtAuthFilter      : Usuario autenticado: testuser con rol USER
+2026-07-12T23:51:54.240-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Error al extraer username: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2026-07-12T23:51:54.277-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Token inválido: JWT expired 600275 milliseconds ago at 2026-07-13T03:41:54.000Z. Current time: 2026-07-13T03:51:54.275Z. Allowed clock skew: 0 milliseconds.
+2026-07-12T23:51:54.278-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Error al extraer role: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2026-07-12T23:51:54.294-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.security.jwt.JwtService   : Token inválido: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2026-07-12T23:51:54.512-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Agregando item al carrito del usuario: testuser, producto: 1
+2026-07-12T23:51:54.512-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Stock insuficiente para producto Producto A: stock=1, solicitado=5
+2026-07-12T23:51:54.520-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Eliminando producto 99 del carrito del usuario: testuser
+2026-07-12T23:51:54.520-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:51:54.521-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Producto 99 no encontrado en el carrito del usuario testuser
+2026-07-12T23:51:54.525-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Agregando item al carrito del usuario: noexiste, producto: 1
+2026-07-12T23:51:54.526-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Usuario no existe: noexiste
+2026-07-12T23:51:54.531-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Limpiando carrito del usuario: testuser
+2026-07-12T23:51:54.531-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:51:54.531-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Carrito limpiado para usuario: testuser
+2026-07-12T23:51:54.538-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Eliminando producto 1 del carrito del usuario: testuser
+2026-07-12T23:51:54.538-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:51:54.538-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Producto eliminado del carrito
+2026-07-12T23:51:54.544-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Actualizando cantidad para producto 1 del usuario testuser a 5
+2026-07-12T23:51:54.544-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:51:54.546-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Cantidad actualizada a 5
+2026-07-12T23:51:54.551-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Obteniendo carrito del usuario: testuser
+2026-07-12T23:51:54.551-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:51:54.560-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Agregando item al carrito del usuario: testuser, producto: 1
+2026-07-12T23:51:54.563-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Nuevo item agregado: Producto A x 2
+2026-07-12T23:51:54.563-04:00  INFO 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Carrito actualizado para usuario: testuser
+2026-07-12T23:51:54.568-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Obteniendo carrito del usuario: testuser
+2026-07-12T23:51:54.569-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Buscando carrito por usuario ID: 1
+2026-07-12T23:51:54.569-04:00  WARN 532 --- [ms-carrito] [main] c.e.ms_carrito.service.CarritoService    : Carrito no encontrado para usuario ID: 1
+2026-07-12T23:51:54.576-04:00 DEBUG 532 --- [ms-carrito] [main] c.e.m.service.CustomUserDetailsService   : Cargando UserDetails para usuario: testuser
+2026-07-12T23:51:55.025-04:00  INFO 532 --- [ms-carrito] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-12T23:51:55.030-04:00  INFO 532 --- [ms-carrito] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-12T23:51:55.033-04:00  INFO 532 --- [ms-carrito] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

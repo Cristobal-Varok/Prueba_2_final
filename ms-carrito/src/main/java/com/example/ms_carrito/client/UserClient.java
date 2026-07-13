@@ -20,6 +20,26 @@ public class UserClient {
                 .build();
     }
 
+    public Long getUserId(String username) {
+        log.debug("Consultando ID del usuario en ms_users: {}", username);
+        try {
+            Map response = webClient.get()
+                    .uri("/api/v1/users/username/{username}", username) // Asegúrate que esta sea la ruta correcta en tu ms-users
+                    .retrieve()
+                    .bodyToMono(Map.class)
+                    .block();
+
+            if (response != null && response.containsKey("id")) {
+                Object idObj = response.get("id");
+                return Long.valueOf(idObj.toString());
+            }
+            return null;
+        } catch (Exception e) {
+            log.error("Error obteniendo ID del usuario '{}': {}", username, e.getMessage());
+            return null;
+        }
+    }
+
     public boolean userExists(String username) {
         log.debug("Consultando existencia de usuario en ms_users: {}", username);
         try {

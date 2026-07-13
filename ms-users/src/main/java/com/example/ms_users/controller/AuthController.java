@@ -166,4 +166,23 @@ public class AuthController {
         log.debug("Verificación de existencia - Usuario: {}, Existe: {}", username, exists);
         return ResponseEntity.ok(Map.of("exists", exists));
     }
+
+    @Operation(
+            summary = "Obtener ID de usuario por username",
+            description = "Devuelve el ID interno de un usuario a partir de su username. Endpoint público, usado por otros microservicios."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "ID del usuario encontrado"),
+            @ApiResponse(responseCode = "404", description = "Usuario no encontrado")
+    })
+    @GetMapping("/user-id/{username}")
+    public ResponseEntity<?> getUserId(
+            @Parameter(description = "Nombre de usuario", required = true, example = "juan.perez")
+            @PathVariable String username) {
+        return userService.findByUsername(username)
+                .<ResponseEntity<?>>map(user -> ResponseEntity.ok(Map.of("id", user.getId())))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body(Map.of("error", "Usuario no encontrado: " + username)));
+    }
+
 }

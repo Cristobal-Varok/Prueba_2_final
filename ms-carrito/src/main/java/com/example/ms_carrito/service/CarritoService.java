@@ -197,10 +197,8 @@ public class CarritoService {
         return carritoRepository.save(carrito);
     }
 
-    // Método temporal para obtener userId desde username
     private Long getUserIdFromUsername(String username) {
-        // TODO: Llamar a ms_users para obtener el ID real
-        // Por ahora, retornamos un ID fijo para pruebas
-        return 1L;
+        log.debug("Obteniendo ID real del usuario '{}' desde ms-users", username);
+        return userClient.getUserId(username);
     }
 }
