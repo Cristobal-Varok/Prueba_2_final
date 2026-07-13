@@ -1,4 +1,4 @@
-package com.example.ms_carrito;
+package com.example.ms_carrito.service;
 
 import com.example.ms_carrito.client.ProductServiceClient;
 import com.example.ms_carrito.client.UserClient;
@@ -12,7 +12,6 @@ import com.example.ms_carrito.model.Carrito;
 import com.example.ms_carrito.model.CarritoItem;
 import com.example.ms_carrito.model.CarritoStatus;
 import com.example.ms_carrito.repository.CarritoRepository;
-import com.example.ms_carrito.service.CarritoService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -25,7 +24,6 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)

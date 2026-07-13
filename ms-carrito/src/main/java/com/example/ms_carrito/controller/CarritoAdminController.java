@@ -24,7 +24,7 @@ public class CarritoAdminController {
 
     @GetMapping("/user/{userId}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<CarritoResponseDTO> getUserCart(@PathVariable Long Id) {
+    public ResponseEntity<CarritoResponseDTO> getUserCart(@PathVariable("userId") Long Id) {
         log.info("ADMIN - Obteniendo carrito del usuario {}", Id);
         Carrito carrito = carritoService.findByUserIdOrThrow(Id);
         return ResponseEntity.ok(mapToResponseDTO(carrito));
@@ -32,17 +32,15 @@ public class CarritoAdminController {
 
     @DeleteMapping("/user/{userId}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Void> clearUserCart(@PathVariable Long Id) {
+    public ResponseEntity<Void> clearUserCart(@PathVariable("userId") Long Id) {
         log.info("ADMIN - Limpiando carrito del usuario {}", Id);
-        Carrito carrito = carritoService.findByUserIdOrThrow(Id);
-        carrito.getItems().clear();
-        carritoService.findByIdOrThrow(carrito.getCartId());
+        carritoService.clearCartByUserId(Id);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/exists/{userId}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Map<String, Boolean>> cartExists(@PathVariable Long Id) {
+    public ResponseEntity<Map<String, Boolean>> cartExists(@PathVariable("userId") Long Id) {
         log.debug("ADMIN - Verificando existencia de carrito para usuario: {}", Id);
         boolean exists = carritoService.cartExists(Id);
         return ResponseEntity.ok(Map.of("exists", exists));

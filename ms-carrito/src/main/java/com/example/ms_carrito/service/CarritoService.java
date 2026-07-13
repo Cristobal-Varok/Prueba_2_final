@@ -149,6 +149,15 @@ public class CarritoService {
         log.info("Carrito limpiado para usuario: {}", username);
     }
 
+    @Transactional
+    public void clearCartByUserId(Long userId) {
+        log.info("ADMIN - Limpiando carrito del usuario ID: {}", userId);
+        Carrito carrito = findByUserIdOrThrow(userId);
+        carrito.getItems().clear();
+        carritoRepository.save(carrito);
+        log.info("ADMIN - Carrito limpiado para usuario ID: {}", userId);
+    }
+
     public Carrito getUserCart(String username) {
         log.debug("Obteniendo carrito del usuario: {}", username);
         Long userId = getUserIdFromUsername(username);

@@ -20,7 +20,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/productos/admin")
+@RequestMapping("/api/v1/productos/admin")
 @RequiredArgsConstructor
 @Tag(name = "Productos Admin", description = "Operaciones administrativas sobre productos")
 public class ProductoControllerAdmin {
